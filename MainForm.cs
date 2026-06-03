@@ -45,20 +45,17 @@ namespace InputController
                 }
                 
                 if (bmp != null) {
-                    using (bmp) {
-                        int size = Math.Min(bmp.Width, bmp.Height);
-                        int x = (bmp.Width - size) / 2;
-                        int y = (bmp.Height - size) / 2;
-                        using (Bitmap sqBmp = new Bitmap(size, size)) {
-                            using (Graphics g = Graphics.FromImage(sqBmp)) {
-                                g.DrawImage(bmp, new Rectangle(0, 0, size, size), new Rectangle(x, y, size, size), GraphicsUnit.Pixel);
-                            }
-                            IntPtr hIcon = sqBmp.GetHicon();
-                            Icon myIcon = Icon.FromHandle(hIcon);
-                            this.Icon = myIcon;
-                            trayIcon.Icon = myIcon;
-                        }
+                    int size = Math.Min(bmp.Width, bmp.Height);
+                    int x = (bmp.Width - size) / 2;
+                    int y = (bmp.Height - size) / 2;
+                    Bitmap sqBmp = new Bitmap(size, size);
+                    using (Graphics g = Graphics.FromImage(sqBmp)) {
+                        g.DrawImage(bmp, new Rectangle(0, 0, size, size), new Rectangle(x, y, size, size), GraphicsUnit.Pixel);
                     }
+                    IntPtr hIcon = sqBmp.GetHicon();
+                    Icon myIcon = Icon.FromHandle(hIcon);
+                    this.Icon = myIcon;
+                    trayIcon.Icon = myIcon;
                 } else {
                     trayIcon.Icon = SystemIcons.Application;
                 }

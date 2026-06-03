@@ -84,7 +84,7 @@ TinyDesk/
 
 ## 📜 License & Attribution
 
-**Author**: Muhammad Bintang Bagas Prasetya  
+**Author**: Bintang Bagas  
 **Last Updated**: June 4, 2026  
 
 This project is licensed under **Creative Commons Attribution-NonCommercial (CC BY-NC)** and **CC BY-SA 4.0**.
@@ -100,5 +100,5 @@ You are highly encouraged to:
   <br>
   <img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" alt="CC BY-SA 4.0" />
   <br>
-  <i>Made with ❤️ by Muhammad Bintang Bagas Prasetya</i>
+  <i>Made with ❤️ by Bintang Bagas</i>
 </div>
