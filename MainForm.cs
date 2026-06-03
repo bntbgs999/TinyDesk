@@ -1,5 +1,5 @@
 // =================================================================
-// Author: Muhammad Bintang Bagas Prasetya
+// Author: Bintang Bagas
 // Project: TinyDesk
 // =================================================================
 
@@ -35,9 +35,17 @@ namespace InputController
             trayIcon.Text = "Tiny Desk";
             trayIcon.Visible = true;
             try {
-                string iconPath = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, @"assets\splash.png");
-                if (File.Exists(iconPath)) {
-                    using (Bitmap bmp = new Bitmap(iconPath)) {
+                var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("InputController.assets.splash.png");
+                Bitmap bmp = null;
+                if (stream != null) {
+                    bmp = new Bitmap(stream);
+                } else {
+                    string iconPath = System.IO.Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, @"assets\splash.png");
+                    if (System.IO.File.Exists(iconPath)) bmp = new Bitmap(iconPath);
+                }
+                
+                if (bmp != null) {
+                    using (bmp) {
                         int size = Math.Min(bmp.Width, bmp.Height);
                         int x = (bmp.Width - size) / 2;
                         int y = (bmp.Height - size) / 2;
