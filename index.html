@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyDesk - Input Controller</title>
+    <link rel="icon" type="image/png" href="assets/splash.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background-color: #fff;
+        }
+        h1 { margin-bottom: 0.2rem; font-size: 2.2rem; }
+        p.subtitle { color: #586069; font-size: 1.1rem; margin-top: 0; }
+        .hero-img { width: 160px; height: auto; margin-bottom: 0.5rem; }
+        .box {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .btn {
+            display: inline-block;
+            background: #2ea44f;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 5px;
+            border: 1px solid rgba(27,31,35,0.15);
+        }
+        .btn:hover { background: #2c974b; text-decoration: none; }
+        .btn-github {
+            background: #fafbfc;
+            color: #24292e;
+        }
+        .btn-github:hover {
+            background: #f3f4f6;
+        }
+        .btn-group {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        code {
+            background: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 85%;
+        }
+        footer { margin-top: 4rem; font-size: 0.85em; color: #586069; border-top: 1px solid #eaecef; padding-top: 2rem; }
+        .hotkey-list {
+            list-style: none;
+            padding: 0;
+        }
+        .hotkey-list li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="assets/splash.png" alt="TinyDesk Logo" class="hero-img">
+    <h1>TinyDesk</h1>
+    <p class="subtitle">A simple Windows utility to block your keyboard or touchpad.</p>
+
+    <div class="box">
+        <p>I built this tool out of personal frustration. My study desk is very small and only has enough room for my laptop. Whenever I needed to write, I had to place my notebooks directly on top of my keyboard, which triggered accidental clicks and keystrokes.</p>
+        <p><strong>TinyDesk</strong> solves this by letting you toggle your keyboard and touchpad on/off using global hotkeys!</p>
+        
+        <div class="btn-group">
+            <a href="releases/TinyDesk.exe" class="btn" download>Download .exe</a>
+            <a href="https://github.com/BintangBagas/TinyDesk" class="btn btn-github">View GitHub Repo</a>
+        </div>
+        <p style="font-size: 0.85em; color: #586069; margin-top: 12px; margin-bottom: 0;">Standalone Windows executable. Requires Administrator privileges to run.</p>
+    </div>
+
+    <h3>Default Hotkeys</h3>
+    <ul class="hotkey-list">
+        <li><code>Ctrl + T</code> &mdash; Enable Touchpad</li>
+        <li><code>Ctrl + K</code> &mdash; Enable All (Reset)</li>
+        <li><code>Ctrl + Shift + M</code> &mdash; Show/Hide Window</li>
+        <li><code>Ctrl + Shift + C</code> &mdash; Exit Application</li>
+    </ul>
+
+    <footer>
+        &copy; 2026 Muhammad Bintang Bagas Prasetya. Released under the CC BY-NC and CC BY-SA 4.0 licenses.
+    </footer>
+
+</body>
+</html>

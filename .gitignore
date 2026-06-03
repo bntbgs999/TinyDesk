@@ -1,0 +1,12 @@
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+!releases/
+!releases/TinyDesk.exe
