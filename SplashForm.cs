@@ -23,7 +23,11 @@ namespace InputController
             pic.Dock = DockStyle.Fill;
             pic.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            pic.Image = Image.FromFile("assets/splash.png");
+            try {
+                var stream = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("InputController.assets.splash.png");
+                if (stream != null) pic.Image = Image.FromStream(stream);
+                else pic.Image = Image.FromFile("assets/splash.png");
+            } catch { }
 
             this.Controls.Add(pic);
 
